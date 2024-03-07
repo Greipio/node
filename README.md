@@ -3,8 +3,8 @@
 The official Node.js library of Greip API
 
 [Report Issue](https://github.com/Greipio/node/issues/new) ·
-[Request Feature](https://github.com/Greipio/node/discussions/new) ·
-[Greip Website](https://greip.io/) · [Documentation](https://docs.greip.io/)
+[Request Feature](https://github.com/Greipio/node/discussions/new?category=ideas)
+· [Greip Website](https://greip.io/) · [Documentation](https://docs.greip.io/)
 
 [![NPM Package of Greip](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/greip-node)
 [![Github Repository](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Greipio/node)
