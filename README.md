@@ -278,9 +278,3 @@ You can find the full guide of this package by visiting our
 
 -   [Greip Developers](https://greip.io)
 -   [All Contributors](https://github.com/Greipio/node/graphs/contributors)
-
-## License
-
-The MIT License (MIT). Please see
-[License](https://github.com/Greipio/node/blob/main/LICENSE) File for more
-information.
