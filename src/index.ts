@@ -17,7 +17,7 @@ class Greip {
      * @param token Token string (Greip API Key).
      */
     constructor(token: string) {
-        //? Check if the token is provided.
+        // Check if the token is provided.
         if (!token) {
             throw new Error("Token is required");
         }

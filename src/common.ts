@@ -76,8 +76,6 @@ export const makeHttpRquest = (
                     callback(response.data.data);
                 }
             } else {
-                console.log(response);
-
                 throw new Error(
                     "An unknown error occurred while sending the request to Greip API 2."
                 );
