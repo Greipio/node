@@ -1,7 +1,7 @@
 {
     "name": "greip-node",
-    "version": "1.0.0",
-    "description": "Official Node.js library of Greip API",
+    "version": "1.0.1",
+    "description": "Official Node.js library for Greip API",
     "author": {
         "name": "Greip",
         "email": "info@greip.io",

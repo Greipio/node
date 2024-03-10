@@ -5,11 +5,11 @@ let greip: Greip;
 
 beforeEach(() => {
     dotenv.config();
-    const token = process.env.TOKEN || "";
+    const token = process.env.GREIP_TOKEN || "";
     //? Force fail if token is not provided
     if (token === "") {
         throw new Error(
-            "Please place the `TOKEN` in the .env file before running the tests."
+            "Please place the `GREIP_TOKEN` in the .env file before running the tests."
         );
     }
     greip = new Greip(token);

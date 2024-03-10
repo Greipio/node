@@ -42,7 +42,7 @@ Here's how you use the API Methods:
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .Lookup({
@@ -61,7 +61,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .BulkLookup({
@@ -80,7 +80,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .ASN({
@@ -99,7 +99,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .Profanity({
@@ -118,7 +118,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .Country({
@@ -137,7 +137,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .EmailValidation({
@@ -156,7 +156,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .PhoneValidation({
@@ -176,7 +176,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .PaymentFraud({
@@ -255,7 +255,7 @@ greip
 ```javascript
 const { Greip } = require("greip-node");
 
-let greip = new Greip(process.env.YOUR_GREIP_TOKEN);
+let greip = new Greip(process.env.GREIP_TOKEN);
 
 greip
     .IBANValidation({
