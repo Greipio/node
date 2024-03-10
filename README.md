@@ -21,8 +21,6 @@ The official Node.js library of Greip API
 
 ## Installation
 
-For Node.js, React.js & React Native:
-
 ```
 npm i greip-node --save
 ```
@@ -35,9 +33,11 @@ yarn add greip-node
 
 ## Usage
 
-Here's how you use the API Methods:
+Here's how you can use the Greip package in your Node.js project:
 
 ### 1. IP Lookup Method
+
+Use this method to retrieve the information of a given IP address.
 
 ```javascript
 const { Greip } = require("greip-node");
@@ -58,6 +58,9 @@ greip
 
 ### 2. Bulk IP Lookup Method
 
+You can use this method to retrieve the information of multiple IP addresses
+(no need to use the `Lookup` method inside a loop).
+
 ```javascript
 const { Greip } = require("greip-node");
 
@@ -76,6 +79,11 @@ greip
 ```
 
 ### 3. ASN Lookup Method
+
+In this method, Greip will help you lookup any given AS Number and returning
+all data related to it, like: name, org (the organization name), country,
+domain, email, phone, totalIPs, list of all routes (v4 & v6) related the given
+AS Number, etc.
 
 ```javascript
 const { Greip } = require("greip-node");
@@ -96,6 +104,10 @@ greip
 
 ### 4. Profanity Detection Method
 
+This method can be used to detect abuse of your website/app. It’s a great way
+to know more about your user inputs and whether they contain profanity (bad
+words) or not before releasing them to the public.
+
 ```javascript
 const { Greip } = require("greip-node");
 
@@ -114,6 +126,8 @@ greip
 ```
 
 ### 5. Country Lookup Method
+
+This method can help you retrieve information of the given country.
 
 ```javascript
 const { Greip } = require("greip-node");
@@ -134,6 +148,14 @@ greip
 
 ### 6. Email Validation Method
 
+This method provides an additional layer of validation for your system. While
+validating email syntax is important, it is not sufficient.
+
+This method goes beyond syntax validation by checking the domain’s validity,
+the availability of the Mail Service, detecting Disposable Email (Temporary
+Emails), etc. By utilising this method, you can ensure a more thorough
+validation process for email addresses.
+
 ```javascript
 const { Greip } = require("greip-node");
 
@@ -152,6 +174,9 @@ greip
 ```
 
 ### 7. Phone Validation Method
+
+This method can be used as an extra-layer of your system for validating phone
+numbers. It validates phone number syntax and valid-possibility.
 
 ```javascript
 const { Greip } = require("greip-node");
@@ -173,6 +198,8 @@ greip
 
 ### 8. Payment Fraud Prevention Method
 
+Prevent financial losses by deploying AI-Powered modules.
+
 ```javascript
 const { Greip } = require("greip-node");
 
@@ -182,12 +209,12 @@ greip
     .PaymentFraud({
         data: {
             action: "purchase",
-            website_domain: "",
-            website_name: "",
+            website_domain: "greip.io",
+            website_name: "Greip",
             merchant_id: 21,
             shipment_id: 1,
             transaction_id: 100,
-            transaction_amount: 1000000,
+            transaction_amount: 1000,
             transaction_currency: "GBP",
             cart_items: {
                 item_id: 1,
@@ -251,6 +278,9 @@ greip
 ```
 
 ### 9. IBAN Validation Method
+
+This method allows you to validate International Bank Account Numbers (IBANs)
+and retrieve additional information about the country associated with the IBAN.
 
 ```javascript
 const { Greip } = require("greip-node");
