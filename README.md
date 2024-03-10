@@ -13,7 +13,7 @@ The official Node.js library of Greip API
 &nbsp;&nbsp;
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Greipio/node?color=green&label=Minified%20size&logo=github)
 &nbsp;&nbsp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/apache-2-0)
 &nbsp;&nbsp;
 ![API Status](https://img.shields.io/website?down_color=orange&down_message=down&label=API%20status&up_color=green&up_message=up&url=https%3A%2F%2Fgregeoip.com)
 
