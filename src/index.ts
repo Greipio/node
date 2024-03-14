@@ -24,7 +24,7 @@ class Greip {
         this.token = token;
     }
 
-    public Lookup = (options: Options) => {
+    Lookup = (options: Options) => {
         if (typeof options !== "object") options = {};
 
         return new Promise((resolve, reject) => {
@@ -94,6 +94,56 @@ class Greip {
                     params: params.join(","),
                     format: format1,
                     lang: lang1,
+                    mode: mode1
+                },
+                (res: object) => {
+                    if (typeof res !== "object") res = JSON.parse(res);
+                    resolve(res);
+                },
+                this.token
+            );
+        });
+    };
+
+    Threats = (options: Options) => {
+        if (typeof options !== "object") options = {};
+
+        return new Promise((resolve, reject) => {
+            const ip1 = options.ip || "";
+            const format1 = options.format || "JSON";
+            const mode1 = options.mode || "live";
+
+            // Validate the ip variable
+            if (ip1.length < 7) {
+                reject(new Error("You should pass the `ip` parameter."));
+            }
+
+            // Validate the format variable
+            if (!availableFormats.includes(format1)) {
+                reject(
+                    new Error(
+                        'The `format` option value "' +
+                            format1 +
+                            '" you specified is unknown.\nYou can use: `JSON`, `XML`, `CSV` or `Newline`.\nRead more at: https://docs.greip.io/api-reference/endpoint/ip-geolocation/ip-lookup'
+                    )
+                );
+            }
+
+            // Validate the mode variable
+            if (mode1 !== "live" && mode1 !== "test") {
+                reject(
+                    new Error(
+                        'The `mode` option value "' +
+                            mode1 +
+                            '" you specified is unknown.\nYou can use: `live` or `test`.\nRead more at: https://docs.greip.io/api-reference/endpoint/ip-geolocation/ip-lookup'
+                    )
+                );
+            }
+            makeHttpRquest(
+                "threats",
+                {
+                    ip: ip1,
+                    format: format1,
                     mode: mode1
                 },
                 (res: object) => {

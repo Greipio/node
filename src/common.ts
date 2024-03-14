@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL: string = "https://gregeoip.com";
+export const BASE_URL: string = "https://greipapi.com";
 
 export const availableGeoIPParams = [
     "location",

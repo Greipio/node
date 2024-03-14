@@ -15,7 +15,7 @@ The official Node.js library of Greip API
 &nbsp;&nbsp;
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/apache-2-0)
 &nbsp;&nbsp;
-![API Status](https://img.shields.io/website?down_color=orange&down_message=down&label=API%20status&up_color=green&up_message=up&url=https%3A%2F%2Fgregeoip.com)
+![API Status](https://img.shields.io/website?down_color=orange&down_message=down&label=API%20status&up_color=green&up_message=up&url=https%3A%2F%greipapi.com)
 
 ---
 
@@ -56,7 +56,28 @@ greip
     });
 ```
 
-### 2. Bulk IP Lookup Method
+### 2. IP Threats Method
+
+Retrieve threat intelligence information associated with a given IP address.
+
+```javascript
+const { Greip } = require("greip-node");
+
+let greip = new Greip(process.env.GREIP_TOKEN);
+
+greip
+    .Threats({
+        ip: "1.1.1.1"
+    })
+    .then((res: any) => {
+        console.log(res.data); // Log Response
+    })
+    .catch((error: any) => {
+        console.log(error);
+    });
+```
+
+### 3. Bulk IP Lookup Method
 
 You can use this method to retrieve the information of multiple IP addresses
 (no need to use the `Lookup` method inside a loop).
@@ -78,7 +99,7 @@ greip
     });
 ```
 
-### 3. ASN Lookup Method
+### 4. ASN Lookup Method
 
 In this method, Greip will help you lookup any given AS Number and returning
 all data related to it, like: name, org (the organization name), country,
@@ -102,7 +123,7 @@ greip
     });
 ```
 
-### 4. Profanity Detection Method
+### 5. Profanity Detection Method
 
 This method can be used to detect abuse of your website/app. It’s a great way
 to know more about your user inputs and whether they contain profanity (bad
@@ -125,7 +146,7 @@ greip
     });
 ```
 
-### 5. Country Lookup Method
+### 6. Country Lookup Method
 
 This method can help you retrieve information of the given country.
 
@@ -146,7 +167,7 @@ greip
     });
 ```
 
-### 6. Email Validation Method
+### 7. Email Validation Method
 
 This method provides an additional layer of validation for your system. While
 validating email syntax is important, it is not sufficient.
@@ -173,7 +194,7 @@ greip
     });
 ```
 
-### 7. Phone Validation Method
+### 8. Phone Validation Method
 
 This method can be used as an extra-layer of your system for validating phone
 numbers. It validates phone number syntax and valid-possibility.
@@ -196,7 +217,7 @@ greip
     });
 ```
 
-### 8. Payment Fraud Prevention Method
+### 9. Payment Fraud Prevention Method
 
 Prevent financial losses by deploying AI-Powered modules.
 
@@ -277,7 +298,7 @@ greip
     });
 ```
 
-### 9. IBAN Validation Method
+### 10. IBAN Validation Method
 
 This method allows you to validate International Bank Account Numbers (IBANs)
 and retrieve additional information about the country associated with the IBAN.
