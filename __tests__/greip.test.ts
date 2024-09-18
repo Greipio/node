@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import { Greip } from "../src/index";
+import Greip from "../src/index";
 
 let greip: Greip;
 
@@ -32,7 +32,7 @@ describe("Greip", () => {
 
     test("EmailValidation", async () => {
         const data: any = await greip.EmailValidation({
-            email: "name@domain.com"
+            email: "name[at]domain.com"
         });
         expect(data.isValid).toBeFalsy();
     });

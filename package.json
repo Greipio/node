@@ -15,7 +15,9 @@
     "require": "./dist/src/index.js"
   },
     "scripts": {
-        "build": "tsc",
+        "build:cjs": "tsc --project tsconfig.cjs.json",
+        "build:esm": "tsc --project tsconfig.esm.json",
+        "build": "npm run build:cjs && npm run build:esm",
         "tsc": "tsc --pretty --watch",
         "test": "jest",
         "test --watch": "jest --watchAll",
