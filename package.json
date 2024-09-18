@@ -1,19 +1,20 @@
 {
     "name": "greip-node",
-    "version": "1.2.1",
+    "version": "1.2.8",
     "description": "Official Node.js library for Greip API",
     "author": {
         "name": "Greip",
         "email": "info@greip.io",
         "url": "https://greip.io"
     },
-    "main": "dist/src/index.js",
-    "types": "dist/src/index.d.ts",
-    "type": "module",
+    "main": "dist/cjs/index.cjs.js",
+    "types": "dist/cjs/index.d.ts",
     "exports": {
-    "import": "./dist/src/index.js",
-    "require": "./dist/src/index.js"
-  },
+        ".": {
+            "import": "./dist/esm/index.mjs.js",
+            "require": "./dist/cjs/index.cjs.js"
+        }
+    },
     "scripts": {
         "build:cjs": "tsc --project tsconfig.cjs.json",
         "build:esm": "tsc --project tsconfig.esm.json",
@@ -22,7 +23,7 @@
         "test": "jest",
         "test --watch": "jest --watchAll",
         "format": "prettier --write \"src/**/*.ts\"",
-        "lint": "tslint -p tsconfig.json",
+        "lint": "tslint -p tsconfig.cjs.json",
         "prepare": "npm run build",
         "prepublishOnly": "npm test && npm run lint",
         "preversion": "npm run lint",

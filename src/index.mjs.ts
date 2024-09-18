@@ -36,7 +36,7 @@ class Greip {
             lang1 = lang1.toUpperCase();
 
             // Validate the ip variable
-            if (ip1.length < 7) {
+            if (ip1.length < 3) {
                 reject(new Error("You should pass the `ip` parameter."));
             }
 
@@ -114,7 +114,7 @@ class Greip {
             const mode1 = options.mode || "live";
 
             // Validate the ip variable
-            if (ip1.length < 7) {
+            if (ip1.length < 3) {
                 reject(new Error("You should pass the `ip` parameter."));
             }
 
@@ -593,7 +593,6 @@ class Greip {
     };
 }
 
-export { Greip };
+// export { Greip };
 
 export default Greip;
-module.exports = Greip;
