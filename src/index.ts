@@ -596,3 +596,4 @@ class Greip {
 export { Greip };
 
 export default Greip;
+module.exports = Greip;
