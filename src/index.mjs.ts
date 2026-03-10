@@ -88,7 +88,7 @@ class Greip {
                 );
             }
             makeHttpRquest(
-                "IPLookup",
+                "lookup/ip",
                 {
                     ip: ip1,
                     params: params.join(","),
@@ -140,7 +140,7 @@ class Greip {
                 );
             }
             makeHttpRquest(
-                "threats",
+                "lookup/ip/threats",
                 {
                     ip: ip1,
                     format: format1,
@@ -229,8 +229,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "BulkLookup",
+                "lookup/ip/bulk",
                 {
                     ips: ips1,
                     params: params.join(","),
@@ -316,8 +317,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "Country",
+                "lookup/country",
                 {
                     CountryCode: countryCode,
                     params: params.join(","),
@@ -383,8 +385,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "badWords",
+                "scoring/profanity",
                 {
                     text: text1,
                     params: params.join(","),
@@ -423,8 +426,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "ASNLookup",
+                "lookup/asn",
                 {
                     asn: asn1,
                     mode: mode1
@@ -460,8 +464,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "validateEmail",
+                "scoring/email",
                 {
                     email: email1,
                     mode: mode1
@@ -497,8 +502,9 @@ class Greip {
                     )
                 );
             }
+
             makePostRquest(
-                "paymentFraud",
+                "scoring/payment",
                 {
                     data: data1,
                     mode: mode1
@@ -539,8 +545,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "validatePhone",
+                "scoring/phone",
                 {
                     phone: phone1,
                     countryCode: countryCode1,
@@ -577,8 +584,9 @@ class Greip {
                     )
                 );
             }
+
             makeHttpRquest(
-                "validateIBAN",
+                "lookup/iban",
                 {
                     iban: iban1,
                     mode: mode1

@@ -1,6 +1,6 @@
 {
     "name": "greip-node",
-    "version": "1.2.10",
+    "version": "1.2.11",
     "description": "Official Node.js library for Greip API",
     "author": {
         "name": "Greip",
