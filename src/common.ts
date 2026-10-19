@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL: string = "https://greipapi.com";
+export const BASE_URL: string = "https://v2.greipapi.com";
 
 export const availableGeoIPParams = [
     "location",
@@ -70,10 +70,12 @@ export const makeHttpRquest = (
         })
         .then((response) => {
             if (response.status === 200) {
-                if (response.data.status !== "success") {
+                if (response.data.success === false) {
                     callback(response.data);
-                } else {
+                } else if (response.data.success === true && response.data.data !== undefined) {
                     callback(response.data.data);
+                } else {
+                    callback(response.data);
                 }
             } else {
                 throw new Error(
@@ -102,10 +104,12 @@ export const makePostRquest = (
         })
         .then((response) => {
             if (response.status === 200) {
-                if (response.data.status !== "success") {
+                if (response.data.success === false) {
                     callback(response.data);
-                } else {
+                } else if (response.data.success === true && response.data.data !== undefined) {
                     callback(response.data.data);
+                } else {
+                    callback(response.data);
                 }
             } else {
                 throw new Error(

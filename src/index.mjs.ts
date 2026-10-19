@@ -88,9 +88,8 @@ class Greip {
                 );
             }
             makeHttpRquest(
-                "lookup/ip",
+                `lookup/ip/${encodeURIComponent(ip1)}`,
                 {
-                    ip: ip1,
                     params: params.join(","),
                     format: format1,
                     lang: lang1,
@@ -140,9 +139,8 @@ class Greip {
                 );
             }
             makeHttpRquest(
-                "lookup/ip/threats",
+                `score/ip/${encodeURIComponent(ip1)}`,
                 {
-                    ip: ip1,
                     format: format1,
                     mode: mode1
                 },
@@ -231,9 +229,9 @@ class Greip {
             }
 
             makeHttpRquest(
-                "lookup/ip/bulk",
+                "geo/ip/bulk",
                 {
-                    ips: ips1,
+                    ips: ips1.join(","),
                     params: params.join(","),
                     format: format1,
                     lang: lang1,
@@ -319,9 +317,8 @@ class Greip {
             }
 
             makeHttpRquest(
-                "lookup/country",
+                `lookup/countries/${encodeURIComponent(countryCode)}`,
                 {
-                    CountryCode: countryCode,
                     params: params.join(","),
                     format: format1,
                     lang: lang1,
@@ -386,11 +383,10 @@ class Greip {
                 );
             }
 
-            makeHttpRquest(
-                "scoring/profanity",
+            makePostRquest(
+                "score/text",
                 {
                     text: text1,
-                    params: params.join(","),
                     format: format1,
                     lang: lang1,
                     mode: mode1
@@ -428,9 +424,8 @@ class Greip {
             }
 
             makeHttpRquest(
-                "lookup/asn",
+                `lookup/asn/${encodeURIComponent(asn1)}`,
                 {
-                    asn: asn1,
                     mode: mode1
                 },
                 (res: object) => {
@@ -466,9 +461,8 @@ class Greip {
             }
 
             makeHttpRquest(
-                "scoring/email",
+                `score/email/${encodeURIComponent(email1)}`,
                 {
-                    email: email1,
                     mode: mode1
                 },
                 (res: object) => {
@@ -504,7 +498,7 @@ class Greip {
             }
 
             makePostRquest(
-                "scoring/payment",
+                "score/payments",
                 {
                     data: data1,
                     mode: mode1
@@ -547,10 +541,9 @@ class Greip {
             }
 
             makeHttpRquest(
-                "scoring/phone",
+                `score/phone/${encodeURIComponent(phone1)}`,
                 {
-                    phone: phone1,
-                    countryCode: countryCode1,
+                    country_code: countryCode1,
                     mode: mode1
                 },
                 (res: object) => {
@@ -586,9 +579,8 @@ class Greip {
             }
 
             makeHttpRquest(
-                "lookup/iban",
+                `lookup/iban/${encodeURIComponent(iban1)}`,
                 {
-                    iban: iban1,
                     mode: mode1
                 },
                 (res: object) => {
