@@ -33,6 +33,22 @@ or
 yarn add greip-node
 ```
 
+For the Greip API v2 release line:
+
+```bash
+npm install greip-node@2
+```
+
+---
+
+## Greip API v2 (`greip-node` 2.x)
+
+This major release targets **[Greip API v2](https://v2.greipapi.com)**. See [CHANGELOG.md](./CHANGELOG.md).
+
+- Your API token is sent as a **Bearer** token (set it on the `Greip` constructor).
+- Each method resolves with the API **`data`** object (the `{ success, data, execution_ms }` envelope is handled for you).
+- Response fields use v2 names, for example `ip.address`, `geo.country_code`, `is_valid`, ASN `number`, and profanity `risk_level`.
+
 ---
 
 ## Usage
@@ -60,7 +76,7 @@ const greip = new Greip(process.env.GREIP_TOKEN);
 greip
     .Lookup({ ip: "1.1.1.1" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -81,7 +97,7 @@ greip
 greip
     .Threats({ ip: "1.1.1.1" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -104,7 +120,7 @@ greip
 greip
     .BulkLookup({ ips: ["1.1.1.1", "2.2.2.2"] })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -122,9 +138,9 @@ greip
 
 ```javascript
 greip
-    .ASN({ asn: "AS01" })
+    .ASN({ asn: "AS13335" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -147,7 +163,7 @@ greip
 greip
     .Profanity({ text: "This is just normal sample text." })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -170,7 +186,7 @@ greip
 greip
     .Country({ countryCode: "SA" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -190,7 +206,7 @@ greip
 greip
     .EmailValidation({ email: "name@domain.com" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -214,7 +230,7 @@ greip
         countryCode: "US"
     })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -238,7 +254,7 @@ greip
         }
     })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
@@ -258,7 +274,7 @@ greip
 greip
     .IBANValidation({ iban: "BY86AKBB10100000002966000000" })
     .then((res) => {
-        console.log(res.data);
+        console.log(res.ip?.address ?? res);
     })
     .catch((error) => {
         console.error(error);
