@@ -6,7 +6,7 @@ import {
     availableLanguages,
     makeHttpRquest,
     makePostRquest
-} from "./common";
+} from "./common.js";
 
 class Greip {
     private token: string;
