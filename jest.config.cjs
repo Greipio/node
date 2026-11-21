@@ -3,4 +3,7 @@ module.exports = {
   testEnvironment: "node",
   verbose: true,
   roots: ["<rootDir>/"],
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+  },
 };
